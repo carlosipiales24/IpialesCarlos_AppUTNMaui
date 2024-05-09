@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppUTNMaui.Productos"
+             Title="Productos">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Estilos para Entradas -->
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="#F0F0F0" />
+                <Setter Property="TextColor" Value="#333" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+            </Style>
+
+            <!-- Estilos para Etiquetas -->
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#666" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="0,20,0,0" />
+            </Style>
+
+            <!-- Estilos para los Botones -->
+            <Style x:Key="ButtonStyleInsertar" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#4CAF50" />
+                <!-- Verde -->
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+
+            <Style x:Key="ButtonStyleLeer" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#2196F3" />
+                <!-- Azul -->
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+
+            <Style x:Key="ButtonStyleActualizar" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#FFC107" />
+                <!-- Amarillo -->
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+
+            <Style x:Key="ButtonStyleEliminar" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#F44336" />
+                <!-- Rojo -->
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+
+            <Style x:Key="ButtonStyleRegresar" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#673AB7" />
+                <!-- Púrpura -->
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+
+            <Style x:Key="ButtonStyleMenu" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#3F51B5" />
+                <!-- Índigo -->
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="10">
+            <Label Text="Id: Producto" Style="{StaticResource LabelStyle}" />
+            <Entry x:Name="txtIdProducto" Style="{StaticResource EntryStyle}" />
+            <Label Text="Nombre Producto" Style="{StaticResource LabelStyle}" />
+            <Entry x:Name="txtNombreProducto" Style="{StaticResource EntryStyle}" />
+            <Label Text="Existencia" Style="{StaticResource LabelStyle}" />
+            <Entry x:Name="txtExistencia" Style="{StaticResource EntryStyle}" />
+            <Label Text="Precio Unitario" Style="{StaticResource LabelStyle}" />
+            <Entry x:Name="txtPrecioUnitario" Style="{StaticResource EntryStyle}" />
+            <Label Text="IVA" Style="{StaticResource LabelStyle}" />
+            <Entry x:Name="txtIVA" Style="{StaticResource EntryStyle}" />
+            <Label Text="ID Clasificacion" Style="{StaticResource LabelStyle}" />
+            <Entry x:Name="txtClasificacionID" Style="{StaticResource EntryStyle}" />
+
+            <Button x:Name="cmdCreateProd" Text="Insertar" Clicked="cmdCreateProd_Clicked" Style="{StaticResource ButtonStyleInsertar}" />
+            <Button x:Name="cmdLeerProd" Text="Leer" Clicked="cmdLeerProd_Clicked" Style="{StaticResource ButtonStyleLeer}" />
+            <Button x:Name="cmdUpdateProd" Text="Actualizar" Clicked="cmdUpdateProd_Clicked" Style="{StaticResource ButtonStyleActualizar}" />
+            <Button x:Name="cmdDeleteProd" Text="Eliminar" Clicked="cmdDeleteProd_Clicked" Style="{StaticResource ButtonStyleEliminar}" />
+
+            <Button x:Name="cmdRegresar" Text="Clasificaciones" Clicked="cmdRegresar_Clicked" Style="{StaticResource ButtonStyleRegresar}" />
+            <Button x:Name="cmdMenu" Text="Menú Principal" Clicked="cmdMenu_Clicked" Style="{StaticResource ButtonStyleMenu}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

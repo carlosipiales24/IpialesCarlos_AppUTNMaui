@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppUTNMaui.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+    Padding="30,0"
+    Spacing="25"
+    VerticalOptions="CenterAndExpand">
+
+            <Label    
+        Text="INICIAR SESIÓN" 
+        HorizontalOptions="Center"
+        FontSize="24"
+        FontAttributes="Bold"
+        Margin="0,20,0,10"
+        TextColor="DarkBlue"/>
+
+            <Frame
+        Padding="20,10"
+        CornerRadius="10"
+        HasShadow="True"
+        HorizontalOptions="FillAndExpand">
+                <VerticalStackLayout>
+                    <Label x:Name="lblusuario" Text="Usuario" FontSize="Medium"/>
+                    <Entry x:Name="txtUsuario" Placeholder="Username"
+                   Margin="0,0,0,10"
+                   FontSize="Small"
+                   PlaceholderColor="Gray"
+                   TextColor="Black"/>
+
+                    <Label x:Name="lblcontrasenia" Text="Contraseña" FontSize="Medium"/>
+                    <Entry x:Name="txtContrasenia" Placeholder="Password"
+                   IsPassword="True"
+                   FontSize="Small"
+                   PlaceholderColor="Gray"
+                   TextColor="Black"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button x:Name="cmdLogin"
+            Text="Login"
+            FontAttributes="Bold"
+            BackgroundColor="DarkBlue"
+            TextColor="White"
+            CornerRadius="20"
+            Margin="10"
+            Clicked="cmdLogin_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

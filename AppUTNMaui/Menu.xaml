@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppUTNMaui.Menu"
+             Title="Menu">
+    <VerticalStackLayout Padding="30,0" Spacing="25">
+        <Label Text="UNIVERSIDAD TÉCNICA DEL NORTE"
+           HorizontalOptions="Center"
+           FontSize="22"
+           FontAttributes="Bold"
+           TextColor="DarkRed"
+           Margin="0,0,0,5" />
+
+        <Label Text="APLICACIONES MÓVILES" 
+           HorizontalOptions="Center"
+           FontSize="20"
+           FontAttributes="Bold"
+           TextColor="DarkBlue" 
+           Margin="0,0,0,5" />
+
+        <Label Text="CRUD de Productos y Clasificaciones" 
+           HorizontalOptions="Center"
+           FontSize="18"
+           TextColor="Black" 
+           Margin="0,0,0,10" />
+
+        <Label Text="Realizado por: Carlos Ipiales"
+           HorizontalOptions="Center"
+           FontSize="16"
+           FontAttributes="Italic"
+           TextColor="Gray" 
+           Margin="0,0,0,10" />
+
+   
+
+        <Button x:Name="cmdClasificaiones" 
+            Text="Clasificaciones" 
+            Clicked="cmdClasificaiones_Clicked"
+            BackgroundColor="LightSkyBlue"
+            TextColor="White"
+            FontAttributes="Bold"
+            Margin="0,0,0,5" />
+
+        <Button x:Name="cmdProductos" 
+            Text="Productos" 
+            Clicked="cmdProductos_Clicked"
+            BackgroundColor="MediumSeaGreen"
+            TextColor="White"
+            FontAttributes="Bold"
+            Margin="0,0,0,5" />
+
+        <Button x:Name="cmdCerrar" 
+            Text="Cerrar Sesión" 
+            Clicked="cmdCerrar_Clicked"
+            BackgroundColor="Tomato"
+            TextColor="White"
+            FontAttributes="Bold"
+            Margin="0,0,0,5" />
+    </VerticalStackLayout>
+</ContentPage>

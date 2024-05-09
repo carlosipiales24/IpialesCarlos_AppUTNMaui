@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppUTNMaui.Clasificaciones"
+             Title="Clasificaciones">
+
+    <!-- Definición de los recursos y estilos para usar en la página -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="#F0F0F0" />
+                <Setter Property="TextColor" Value="#333" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+            </Style>
+
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#666" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="0,20,0,0" />
+            </Style>
+
+            <!-- Estilos individuales para cada botón -->
+            <Style x:Key="ButtonStyleCrear" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#2196F3" />
+                <!-- Azul -->
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+
+            <Style x:Key="ButtonStyleLeer" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#4CAF50" />
+                <!-- Verde -->
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+
+            <Style x:Key="ButtonStyleActualizar" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#FFC107" />
+                <!-- Amarillo -->
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+
+            <Style x:Key="ButtonStyleEliminar" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#F44336" />
+                <!-- Rojo -->
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+
+            <Style x:Key="ButtonStylePaginaProductos" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#673AB7" />
+                <!-- Púrpura -->
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+
+            <Style x:Key="ButtonStyleMenuPrincipal" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#3F51B5" />
+                <!-- Índigo -->
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout Padding="30,0" Spacing="10">
+        <Label Text="ID: Clasificación" Style="{StaticResource LabelStyle}" />
+        <Entry x:Name="txtIdClasificacion" Style="{StaticResource EntryStyle}" />
+
+        <Label Text="Nombre de la clasificación" Style="{StaticResource LabelStyle}" />
+        <Entry x:Name="txtClasificacion" Style="{StaticResource EntryStyle}" />
+
+        <Button x:Name="cmdCrear" Text="Crear" Clicked="cmdCrear_Clicked" Style="{StaticResource ButtonStyleCrear}" />
+        <Button x:Name="cmdLeer" Text="Leer" Clicked="cmdLeer_Clicked" Style="{StaticResource ButtonStyleLeer}" />
+        <Button x:Name="cmdActualizar" Text="Actualizar" Clicked="cmdActualizar_Clicked" Style="{StaticResource ButtonStyleActualizar}" />
+        <Button x:Name="cmdEliminar" Text="Eliminar" Clicked="cmdEliminar_Clicked" Style="{StaticResource ButtonStyleEliminar}" />
+        <Button x:Name="cmdNext" Text="Productos" Clicked="cmdNext_Clicked" Style="{StaticResource ButtonStylePaginaProductos}" />
+        <Button x:Name="cmdMenu" Text="Menú Principal" Clicked="cmdMenu_Clicked" Style="{StaticResource ButtonStyleMenuPrincipal}" />
+    </VerticalStackLayout>
+</ContentPage>
